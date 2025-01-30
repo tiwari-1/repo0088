@@ -10,6 +10,12 @@ jobs:
         run: |
           echo "Step 1"
       - name: st-2
-        environment: test
         run: | 
           echo "Step 2"
+  pause-flow:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+      - name: st-3
+        run: | 
+          echo "Step 3"

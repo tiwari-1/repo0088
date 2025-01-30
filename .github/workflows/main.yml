@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  - name: test-flow
+  test-flow:
     runs-on: ubuntu-latest
     steps:
       - name: st-1

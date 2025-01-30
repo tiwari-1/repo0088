@@ -3,13 +3,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  name: test-flow
-  runs-on: ubuntu-latest
-  steps:
-    - name: st-1
-      run: |
-        echo "Step 1"
-    - name: st-2
-      environment: test
-      run: | 
-        echo "Step 2"
+  - name: test-flow
+    runs-on: ubuntu-latest
+    steps:
+      - name: st-1
+        run: |
+          echo "Step 1"
+      - name: st-2
+        environment: test
+        run: | 
+          echo "Step 2"

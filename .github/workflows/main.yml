@@ -2,7 +2,7 @@ name: test-workflow
 on:
   workflow_dispatch:
 
-job:
+jobs:
   name: test-flow
   runs-on: ubuntu-latest
   steps:

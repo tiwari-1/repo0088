@@ -14,7 +14,7 @@ jobs:
           echo "Step 2"
   pause-flow:
     runs-on: ubuntu-latest
-    environment: test
+    environment: dev
     steps:
       - name: st-3
         run: | 

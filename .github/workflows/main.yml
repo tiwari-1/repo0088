@@ -1,7 +1,11 @@
 name: test-workflow
 on:
   workflow_dispatch:
-
+    inputs:
+      env-to-deploy:
+        description: The Env Name
+        required: true
+        type: string
 jobs:
   test-flow:
     runs-on: ubuntu-latest
@@ -14,7 +18,7 @@ jobs:
           echo "Step 2"
   pause-flow:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: ${{inputs.env-to-deploy}}
     steps:
       - name: st-3
         run: | 

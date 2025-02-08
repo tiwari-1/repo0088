@@ -3,6 +3,10 @@ on: workflow_dispatch
 jobs:
   workflow-1:
     uses: ./.github/workflows/res.yml
+    with:
+      user_name: "atul"
   workflow-2:
     needs: workflow-1
     uses: ./.github/workflows/res2.yml
+    with:
+      app_name: "at1"

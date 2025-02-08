@@ -1,5 +1,7 @@
 name: Main Token-Rotation Workflow
 on: 
+  schedule:
+    - cron: "*/6 * * * *" 
   workflow_dispatch:
     inputs:
       APP_NAME:

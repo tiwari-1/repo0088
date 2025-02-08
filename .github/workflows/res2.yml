@@ -1,0 +1,11 @@
+name: reusable-workflow-2
+on: 
+  workflow_call:
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: some-output
+        run: |
+          echo "Hello from Res2"

@@ -1,0 +1,8 @@
+name: Main Token-Rotation Workflow
+on: workflow_dispatch
+jobs:
+  workflow-1:
+    uses: ./.github/workflows/res.yml
+  workflow-2:
+    needs: workflow-1
+    uses: ./.github/workflows/res2.yml

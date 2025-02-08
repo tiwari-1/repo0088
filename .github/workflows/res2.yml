@@ -1,11 +1,15 @@
 name: reusable-workflow-2
 on: 
   workflow_call:
-
+    inputs:
+      APP_NAME:
+        description: AWS User Name
+        required: true
+        type: string
 jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
       - name: some-output
         run: |
-          echo "Hello from Res2"
+          echo "Hello from Res2: ${{ inputs.APP_NAME }}"

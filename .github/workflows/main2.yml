@@ -1,12 +1,24 @@
 name: Main Token-Rotation Workflow
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      APP_NAME:
+        description: The AWS Region Code
+        required: false
+        type: string
+        default: "us-east-1"
+      USER_NAME:
+        description: AWS User Name
+        required: true
+        type: string
+        default: "at-cli"
 jobs:
   workflow-1:
     uses: ./.github/workflows/res.yml
     with:
-      USER_NAME: "atul"
+      USER_NAME: ${{ inputs.USER_NAME }}
   workflow-2:
     needs: workflow-1
     uses: ./.github/workflows/res2.yml
     with:
-      APP_NAME: "at1"
+      APP_NAME: ${{ inputs.APP_NAME }}

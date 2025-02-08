@@ -4,9 +4,9 @@ jobs:
   workflow-1:
     uses: ./.github/workflows/res.yml
     with:
-      user_name: "atul"
+      USER_NAME: "atul"
   workflow-2:
     needs: workflow-1
     uses: ./.github/workflows/res2.yml
     with:
-      app_name: "at1"
+      APP_NAME: "at1"

@@ -1,0 +1,20 @@
+name: Main Token-Rotation Workflow
+on: 
+  # schedule:
+  #   - cron: "*/6 * * * *" 
+  workflow_dispatch:
+    inputs:
+      APP_NAME:
+        description: The AWS Region Code
+        required: false
+        type: string
+        default: "us-east-1"
+
+jobs:
+  workflow-1:
+    runs-on: ubuntu-latest
+    - job1:
+      run: |
+        source ../scripts/functions.sh
+        func1 ${{ inputs.APP_NAME }}
+

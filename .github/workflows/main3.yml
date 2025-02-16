@@ -16,6 +16,5 @@ jobs:
     steps:
     - name: job1
       run: |
-        source ../scripts/functions.sh
-        func1 ${{ inputs.APP_NAME }}
+        bash {GITHUB_WORKSPACE}/scripts/functions.sh func1 ${{ inputs.APP_NAME }}
 

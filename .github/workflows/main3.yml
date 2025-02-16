@@ -19,5 +19,7 @@ jobs:
     - name: job1
       run: |
         ls -la
+        cd scripts; ls -la
+        echo ${GITHUB_WORKSPACE}
         bash {GITHUB_WORKSPACE}/scripts/functions.sh func1 ${{ inputs.APP_NAME }}
 

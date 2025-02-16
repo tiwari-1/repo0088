@@ -13,7 +13,8 @@ on:
 jobs:
   workflow-1:
     runs-on: ubuntu-latest
-    - job1:
+    steps:
+    - name: job1
       run: |
         source ../scripts/functions.sh
         func1 ${{ inputs.APP_NAME }}
